@@ -18,6 +18,7 @@ public class Iris {
      * @param filePath The file path for storing task data.
      */
     public Iris(String filePath) {
+        assert !filePath.isEmpty() : "filePath cannot be empty";
         commandParser = new Parser();
         taskStorage = new Storage(filePath);
         ui = new Ui();
